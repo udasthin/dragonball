@@ -4,10 +4,12 @@ module MessageDialog
     attack_type = params[:attack_type]
     puts "#{@name}の攻撃"
     puts "かめはめ波！"if attack_type == "special_attack"
+
   end
 
   def damage_message(**params)
     target = params[:target]
+    zhero2 = params[:zhero2]
     damage = params[:damage]
 
     puts <<~TEXT

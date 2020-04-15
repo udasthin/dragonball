@@ -14,12 +14,7 @@ class GamesController
       if battle_end?
         break
       end
-      @zhero2.attack(@monster)
-      if battle_end?
-        break
-      end
       @monster.attack(@zhero,@zhero2)
-      
       if battle_end?
         break
       end
@@ -36,11 +31,11 @@ class GamesController
   end
   # バトル終了の判定
   def battle_end?
-    @zhero.hp <= 0 || @monster.hp <= 0 || @zhero2.hp <= 0
+    @zhero.hp <= 0 || @monster.hp <= 0
   end
   # ヒーローの勝利判定
   def zhero_win?
-    @zhero.hp > 0 && @zhero2.hp > 0
+    @zhero.hp > 0 
   end
   
   def battle_judgment
