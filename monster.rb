@@ -68,14 +68,14 @@ class Monster < Character
     zhero2.hp = 0 if zhero2.hp < 0
   end
 
-    def transform
-      transform_name = "フルパワーフリーザ"
+  def transform
+    transform_name = "フルパワーフリーザ"
 
-      transform_message(origin_name:@name,transform_name:transform_name)
+    transform_message(origin_name:@name,transform_name:transform_name)
 
-      @offense *= HULL_POWER
-      @name = transform_name
-    end
+    @offense *= HULL_POWER
+    @name = transform_name
+  end
 # モンスタークラスの終わり
 end
 

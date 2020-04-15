@@ -1,6 +1,7 @@
 module MessageDialog
   
   def attack_message(**params)
+    zhero2 = params[:zhero2]
     attack_type = params[:attack_type]
     puts "#{@name}の攻撃"
     puts "かめはめ波！"if attack_type == "special_attack"
