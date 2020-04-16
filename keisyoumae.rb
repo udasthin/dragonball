@@ -167,6 +167,10 @@ loop do
   if monster.hp <= 0
     break
   end
+  zhero2.attack(monster)
+  if monster.hp <= 0
+    break
+  end
   monster.attack(zhero,zhero2)
   if zhero.hp <= 0
     break

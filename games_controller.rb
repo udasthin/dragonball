@@ -14,6 +14,10 @@ class GamesController
       if battle_end?
         break
       end
+      @zhero2.attack(@monster)
+      if battle_end?
+        break
+      end
       @monster.attack(@zhero,@zhero2)
       if battle_end?
         break
